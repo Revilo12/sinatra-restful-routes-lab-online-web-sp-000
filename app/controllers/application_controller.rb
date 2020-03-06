@@ -10,7 +10,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/recipes' do
-    Recipe.new(params.slice("name", "ingredients", "cook_time"))
+    Recipe.create(params.slice("name", "ingredients", "cook_time"))
     redirect "/recipes/#{Recipe.last.id}"
   end
 
