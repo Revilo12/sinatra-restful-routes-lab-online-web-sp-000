@@ -23,4 +23,8 @@ class ApplicationController < Sinatra::Base
     @recipes = Recipe.all
     erb :index
   end
+
+  delte '/recipes/:id' do
+    
+  end
 end
